@@ -16,7 +16,7 @@ on best software engineering practices and reproducible research.
 - Go over some some topics as per students demands
 
 * Grading
-One is supposed to do an a *project* or *internship* or an *independent study* to full fill course requirements.
+One is supposed to do an a *project* or *internship* or an *independent study* to fullfill course requirements.
 There will be a final presentation of the work done during current quarter.
 You will be required to  submit a [[./final_report.org][final report]].
 * Projects
