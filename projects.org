@@ -1,0 +1,69 @@
+* Projects
+
+** DU Net Impact
+Contact: Alice Havill <Alice.Havill@du.edu>
+ 
+The GrowHaus is a non-profit urban green house in northern Denver. They focus
+on food production, distribution, and education specifically in food insecure
+ neighborhoods in Denver. The organization is seeking a team of students to help
+ them implement data gathering and analysis solutions to better understand the
+ impact each pillar of the organization has financially, environmentally, and
+ within the communities they serve.
+
+Also Look at this [[./2018ProjectsPoster.pdf][poster]]
+
+** Colorado Smart Cities Alliance
+Contact: John Tolva <john@cityfi.co>
+The Colorado Smart Cities Alliance, a multi-city initiative focused at regional
+ and state-wide collaboration amongst Colorado municipalities, desires to create
+ a web-based federated open data portal.
+ Of the 12 current members cities some already have open data portals on a fairly
+ narrow range  of SaaS platforms. We would like to work with DU data science
+ and/or computer science students to help pull these feeds together for a
+ "one-stop shop" of Colorado city data access, comparison, and visualization. 
+
+One example of such an effort, albeit with fewer jurisdictions, is
+ https://www.metrochicagodata.org. This site aggregates Chicago-specific data
+ from the city itself, Cook County, and the State of Illinois.
+ 
+Skills needed include data parsing and transformation and high-level scripting
+required for API access. A knowledge of civic data types and/or open data portal
+ systems (Socrata, etc) is preferable but not necessary.
+** Finding trend in the accumulation of military capabilities across country and time
+Contact: Professor Jonathan Moyer.
+This is a The Pardee Center is described at http://pardee.du.edu/
+ 
+We have gathered proprietary data from reference volumes that track country-year
+ counts of military hardware for air, land, and sea.  These data represent self
+ reported values gathered from networks of security analysts and stretch from
+ 1960-present.  There are significant issues with the primary data in terms
+ of quality.  We compounded these issues with a data gathering process that was
+ prone to error.  We estimate that our errors exist in around 10 percent of coded
+ values.  The data measure military assets (a stock of capital) that change
+ slowly over time.  So, while we may have errors in the primary material and
+ the coding framework, it is possible to apply longitudinal smoothing techniques
+ to arrive at trendlines that reflect underlying changing patterns in the stock
+ of capital.
+ 
+We are interested in working with a data scientist or computer scientist who
+ would like us to begin identifying ways in which we can clean, organize, and
+ more effectively structure these data to capture underlying trend in
+ the accumulation of military capabilities across country and time.
+** Compulsory Voting
+Contact: Professor Ian Farrell, from the Sturm College of Law sent along this project description:
+
+I am currently writing a law review article on compulsory voting in federal
+ elections. (I am very familiar with the practice, since voting is compulsory
+ in Australia.) As part of the article, I want to estimate (model? analyze?) what
+ impact compulsory voting would have had on the 2016 presidential election. That
+ is, if every eligible voter had case a ballot, what would the result have been?
+ I have gathered data on whom various demographic groups voted for (when they
+ did vote), as well as data on what percentage of people in various demographic
+ groups cast a ballot (or did not vote). So I expect one could perform a
+ sophisticated reweighing, or other statistical technique(s), to project/predict
+ what would have happened if all eligible voters had voted.
+ (e.g. Voter turnout was lower among lower-educated, poorer, and Hispanic
+ voters -- and of the members of those groups who did vote, they tended to
+ support Clinton more than, say, wealthy white voters.)
+ 
+An individual or small group may use this as their project. 
