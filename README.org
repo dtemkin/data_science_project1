@@ -1,9 +1,10 @@
 * Data Science Project
   - Course: Data Science Project 1-COMP-4447-1
+  - 06:00 PM - 07:50 PM  |Engineering & Computer Science | Room 301
   - Instructor: /Pooran Singh Negi, pooran.negi@gmail.com/
   - Office: 470
   - Office Hours: Before the class T, Th,  4.50- 5.50. Email for 1-on-1 help.
-  
+    
 * Course Description
 Students will work through internships or team projects applying course-work
 to the full data life cycle within a particular domain. Foucus will also be
