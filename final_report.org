@@ -4,33 +4,32 @@ You can work in a group of at most 2 people.
 Final Project requires submission of  .Rmd  file  and a pdf file.
 
 *Apart from the source code, Rmd/notebook must contain following sections.*
-*Note: If you dataset is big enough you can subsample it so that you can run the code in reasonable time*
+
 
 ** Task definition (4 points) 
-What real world problem you tried to solved. *What is input and output of your system.*
-Make sure you project is not too small and not too large.
-*I have provided some link in the website for possible places to look for datasets.*
+What real world problem you trying to solve. *What is input and output of your system.*
+We have some available project. Please select the one as per your interest.
+*I have also provided some link in the website for possible places to look for datasets.*
 *you are free to do web scrapping if desired datasets is not there.*
 
 ** Tools and infrastructure. (4 points) 
 - What tools, libraries and language you used.
 - What kind of pre processing you did in the data and why?
 
-*Please try to prepare and load the data and see what kind of difficulties you are facing.*
-
-** Evaluation metric (10 points) 
+** Activity/evaluation (10 points) 
 - Data Cleaning activity
-- Data Visualization/summary
 - What you did about missing values
+- Data Visualization/summary
 - What kind of hypothesis you tested to find useful predictor.
 - What kind of feature engineering you have to do
+- What kind of model you are going to build
 - How are you going to finally evaluate your project and metrics involved.(*Model assessment*)
 
-*Above two task are the most important thing in data science. Everything else will be derived from them*
-
+*Data cleaning/visualization/summarization are the most important activity in a  data science project*
+*compared to model selection and evaluation. Typically one spent 80-20 % time on them.*
 ** Your results and conclusion (10 points) 
-   How well you method/algorithm did against others. Please report final metrics and error/accuracy analysis here.
-
+  What is current evaluation or finding of the project. is there some metric you can report?
+ 
 
 
 
