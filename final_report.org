@@ -1,6 +1,6 @@
 * Project
 
-Project requires submission of  .Rmd/.ipynb notebook  file  and a pdf file.
+  You can work in a group of at most 2 people. Project requires submission of  .Rmd/.ipynb notebook  file  and a pdf file.
 
 *Apart from the source code, Rmd/notebook must contain following sections.*
 

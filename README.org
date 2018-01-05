@@ -36,6 +36,12 @@ You will be required to  submit a [[./final_report.org][final report]].
 * Projects
   If you not doing to an internship or independent study then we have some Project identified for you.
   Please look at them in the email you received about projects.  *Select the one by 9th January  as per your preference and let us know.*
+
+  You can choose your own dataset.
+   - Some places to look for data is [[https://www.kaggle.com/][kaggle]] 
+     + one interesting dataset [[https://www.kaggle.com/broach/button-tone-sz][EEG data from basic sensory task in Schizophrenia]] 
+   - [[https://www.data.gov/][U.S. Government’s open data]] 
+     
 * Software
 ** R
 *** How to setup R and rstudio
