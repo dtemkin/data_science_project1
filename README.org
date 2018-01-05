@@ -64,7 +64,7 @@ I will go over basic of python and jupyter notebook.
 
 |       Date | Reading/Coding Assignments                                                                             | class activity                                                              |
 |------------+--------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
-| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                                                            | - [[./basic_r_data_structure.r][This]] is R code about basic data structure we went in the class            |
+| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                                                            | - [[./class_code/basic_r_data_structure.r][This]] is R code about basic data structure we went in the class            |
 |            |                                                                                                        | Please practice  in RStudio and try to solve unsolved part.                 |
 |            |                                                                                                        | We'll be manipulating project data using some of these basic data structure |
 |            |                                                                                                        | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]            |
