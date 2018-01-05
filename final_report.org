@@ -8,8 +8,8 @@ Project requires submission of  .Rmd/.ipynb notebook  file  and a pdf file.
 ** Task definition (4 points) 
 What real world problem you trying to solve. *What is input and output of your system.*
 We have some available project. Please select the one as per your interest.
-*I have also provided some link in the website for possible places to look for datasets.*
-*you are free to do web scrapping if desired datasets is not there.*
+*I have  provided some information in the email for possible places to look for datasets.*
+*You are free to do web scrapping if desired datasets is not there.*
 
 ** Tools and infrastructure. (4 points) 
 - What tools, libraries and language you used.
