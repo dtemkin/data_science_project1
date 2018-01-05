@@ -16,12 +16,24 @@ on best software engineering practices and reproducible research.
 - Go over some some topics as per students demands
 
 * Grading
+  There will be a final project and some coding homework assignments. Worst 1 of your homework assignments 
+ will be dropped.
+
 One has to do  a *project*  to full fill course requirements.
 There will be a final presentation of the work done during current quarter.
 You will be required to  submit a [[./final_report.org][final report]].
+
+| coding Homework                                                                              | 25% |
+|----------------------------------------------------------------------------------------------+-----|
+| final project presentation, 15 minutes, 13 March in class                                    | 25% |
+|----------------------------------------------------------------------------------------------+-----|
+| final project report, due 13 March, please refer to above final report format for submission | 50% |
+
+
+
 * Projects
-  If you not going to an internship or independent study then we have some Project identified for you.
-   Please look at them [[./projects.org][here]].  Select the one as per your preference and let me know.
+  If you not doing to an internship or independent study then we have some Project identified for you.
+   Please look at them in the email you received about projects.  Select the one as soon as possible as per your preference and let us know.
 * Software
 ** R
 *** How to setup R and rstudio
@@ -50,9 +62,15 @@ I will go over basic of python and jupyter notebook.
    - [[https://docs.python.org/3/tutorial/index.html][The Python Tutorial]]  
 * Course Activity
 
-|       Date | Reading/Coding Assignments  |   |
-|------------+-----------------------------+---|
-| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial |   |
-|------------+-----------------------------+---|
-|            |                             |   |
-|            |                             |   |
+|       Date | Reading/Coding Assignments                                  | class activity                                                              |
+|------------+-------------------------------------------------------------+-----------------------------------------------------------------------------|
+| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                 | - [[./basic_r_data_structure.r][This]] is R code about basic data structure we went in the class            |
+|            |                                                             | Please practice  in RStudio and try to solve unsolved part.                 |
+|            |                                                             | We'll be manipulating project data using some of these basic data structure |
+|            |                                                             | - For data privacy reason, we'll not checkin data in the [[https://github.com/][gihub]]              |
+|------------+-------------------------------------------------------------+-----------------------------------------------------------------------------|
+| 01-09-2018 | I'll post some information about git tool.                  |                                                                             |
+|            | It help us in version control and  collaborate with others. |                                                                             |
+|            | Please use this [[https://education.github.com/][link]] to get free github account             |                                                                             |
+|------------+-------------------------------------------------------------+-----------------------------------------------------------------------------|
+|            |                                                             |                                                                             |
