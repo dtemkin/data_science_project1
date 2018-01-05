@@ -67,3 +67,18 @@ I am currently writing a law review article on compulsory voting in federal
  support Clinton more than, say, wealthy white voters.)
  
 An individual or small group may use this as their project. 
+** mock jurors and presence of evidence
+Professor Bernard Chao (Law School) and Kylie Santos (J.D. 19) have conducted
+ an online study to determine how different mock jurors responded to the
+ presence of evidence and judicial instructions to use that evidence for one
+ purpose but not another.  The point of the study is to evaluate certain
+ assumptions underlying Federal Rule of Evidence 407 which bars evidence
+ of subsequent remedial measures to prove liability.  The dependent variables
+ are liability (i.e. plaintiff wins/loses), damages and expected value.
+  The researchers are asking for someone to take their dataset and perform
+ a set of regression analyses on the experimental condition (five of them)
+ and various demographics.
+** BP
+Maintenance record about well failure. It is time series data. They
+want to optimize the repair time/schedule.
+

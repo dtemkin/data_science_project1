@@ -6,8 +6,8 @@
   - Office Hours: Before the class T, Th,  4.50- 5.50. Email for 1-on-1 help.
     
 * Course Description
-Students will work through internships or team projects applying course-work
-to the full data life cycle within a particular domain. Foucus will also be
+Students will work through  individual or team projects applying course-work
+to the full data life cycle within a particular domain. Focus will also be
 on best software engineering practices and reproducible research.
 
 - Go over some R  and data science topics.
@@ -16,7 +16,7 @@ on best software engineering practices and reproducible research.
 - Go over some some topics as per students demands
 
 * Grading
-One is supposed to do  a *project*  full fill course requirements.
+One has to do  a *project*  to full fill course requirements.
 There will be a final presentation of the work done during current quarter.
 You will be required to  submit a [[./final_report.org][final report]].
 * Projects
