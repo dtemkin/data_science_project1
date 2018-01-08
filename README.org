@@ -70,16 +70,16 @@ I will go over basic of python and jupyter notebook.
    - [[https://docs.python.org/3/tutorial/index.html][The Python Tutorial]]  
 * Course Activity
 
-|       Date | Reading/Coding Assignments                                                                             | class activity                                                                         |
-|------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------|
-| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                                                            | - [[./class_code/basic_r_data_structure.r][This]] is R code about basic data structure we went in the class                       |
-|            |                                                                                                        | Please practice  in RStudio and try to solve unsolved part.                            |
-|            |                                                                                                        | [[https://www.kaggle.com/c/titanic/data][Here]] is the link to titanic dataset used in above code. You need to download train.csv |
-|            |                                                                                                        | You need to keep it in the same folder as the  r code or set path appropriately        |
-|            |                                                                                                        | We'll be manipulating project data using some of these basic data structure            |
-|            |                                                                                                        | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]                       |
-|------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------|
-| 01-09-2018 | I'll post some information about git tool. It help us in version control and  collaborate with others. |                                                                                        |
-|            | Please use this [[https://education.github.com/][link]] to get free github account                                                        |                                                                                        |
-|------------+--------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------|
-|            |                                                                                                        |                                                                                        |
+|       Date | Reading/Coding Assignments                                                                             | class activity                                                                  |
+|------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                                                            | - [[./class_code/basic_r_data_structure.r][This]] is R code about basic data structure we went in the class                |
+|            |                                                                                                        | Please practice  in RStudio and try to solve unsolved part.                     |
+|            |                                                                                                        | [[./data/train.csv][Here]] is the link to titanic dataset used in above code.                         |
+|            |                                                                                                        | You need to keep it in the same folder as the  r code or set path appropriately |
+|            |                                                                                                        | We'll be manipulating project data using some of these basic data structure     |
+|            |                                                                                                        | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]                |
+|------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+| 01-09-2018 | I'll post some information about git tool. It help us in version control and  collaborate with others. |                                                                                 |
+|            | Please use this [[https://education.github.com/][link]] to get free github account                                                        |                                                                                 |
+|------------+--------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|            |                                                                                                        |                                                                                 |
