@@ -80,7 +80,8 @@ I will go over basic of python and jupyter notebook.
 |            |                                                             | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]                |
 |------------+-------------------------------------------------------------+---------------------------------------------------------------------------------|
 | 01-09-2018 | It help us in version control and  collaborate with others. |                                                                                 |
-|            | Please use this [[https://education.github.com/][link]] to get free github account.            |                                                                                 |
+|            | Got 15 minutes and want to learn Git, please use            |                                                                                 |
+|            | use this [[https://education.github.com/][link]] to get free github account.                   |                                                                                 |
 |            | Try this [[https://try.github.io/levels/1/challenges/1][link]] before the class                              |                                                                                 |
 |------------+-------------------------------------------------------------+---------------------------------------------------------------------------------|
 |            |                                                             |                                                                                 |
