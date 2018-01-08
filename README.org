@@ -82,5 +82,7 @@ I will go over basic of python and jupyter notebook.
 | 01-09-2018 | It help us in version control and  collaborate with others.                   |                                                                                 |
 |            | Got 15 minutes and want to learn Git, please use  this [[https://try.github.io/levels/1/challenges/1][link]] before the class. |                                                                                 |
 |            | Use this [[https://education.github.com/][link]] to get *free github account*.                                   |                                                                                 |
+|            | - [[http://www.vogella.com/tutorials/Git/article.html][git tutorial]]                                                                |                                                                                 |
+|            | -[[https://guides.github.com/][ overview guides]]                                                             |                                                                                 |
 |------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
 |            |                                                                               |                                                                                 |
