@@ -1,6 +1,6 @@
 * Project
 
-  You can work in a group of at most 2 people. Project requires submission of  .Rmd/.ipynb notebook  file  and a pdf file.
+  You can work in a group of at most 2 students. Two team can work in the same project. Project requires submission of  .Rmd/.ipynb notebook  file  and a pdf file.
 
 *Apart from the source code, Rmd/notebook must contain following sections.*
 
