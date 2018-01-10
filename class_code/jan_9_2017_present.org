@@ -1,3 +1,4 @@
+#+STARTUP:  inlineimages
 * Version control system?
 
  - Allows to keep track of history of files
@@ -19,18 +20,18 @@ In Distributed version control system
   -Git is popular distributed version control system.
 
 * Distributed version control system cont..
-                
-               |--------|
-               | remote |
-     |---------| repo   |-------
-     |         |----|---|      |
-     |              |          | 
-     |              |          |
- |---|-----|    |---|----| |--------|
- | lcoal  |    | lcoal  |  | lcoal  |
- | repo 1 |    | repo 2 |  | repo 3 |
- |--------|    |--------|  |--------|
+                  
+#+BEGIN_SRC dot :file git_dist_arch.png :cmdline -Kdot -Tpng
+digraph G {
+  "remote repo" -> "local repo1";
+  "remote repo" -> "local repo2";
+  "remote repo" -> "local repo3";
+}
 
+#+END_SRC
+
+#+RESULTS:
+[[file:git_dist_arch.png]]
 
 * Git repositories
   - A repository can be cloned using git tool (*git clone ...*)
