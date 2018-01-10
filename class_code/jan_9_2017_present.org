@@ -33,6 +33,7 @@ digraph G {
 #+RESULTS:
 [[file:git_dist_arch.png]]
 
+[[file:./git_dist_arch.png]]
 * Git repositories
   - A repository can be cloned using git tool (*git clone ...*)
 
