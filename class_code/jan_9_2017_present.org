@@ -1,0 +1,146 @@
+* Version control system?
+
+ - Allows to keep track of history of files
+ - Allows creating different version of files
+
+** Repository
+
+ - Place Where version of files are kept
+
+* Distributed version control system
+There are localized and centralized version control system.
+But they have single point of failure.
+
+In Distributed version control system
+  - Each user has a copy of repository.
+    - Copying is called *cloning*.
+    - Resulting copy is called *clone*.
+
+  -Git is popular distributed version control system.
+
+* Distributed version control system cont..
+
+                                 o---------+
+            +--------------------+ remote  +---------------+
+            |                    | repo    |               |
+            |                    +----+----+               |
+      o-----o---+                     |              o-----o-----+
+      | local   |               o-----o----+         | local     |
+      | repo 1  |               | local    |         | repo 3    |
+      +---------+               | repo 2   |         +-----------+
+                                +----------+
+* Git repositories
+  - A repository can be cloned using git tool (*git clone ...*)
+
+    e.g *git clone https://github.com/rlister/org-present.git*
+
+After cloning one has complete repository with all the history.
+
+* Working Tree
+ - Colection of files in a local repository is called /working tree/
+ - A file in the working tree can have following state
+| state          | Description                          |
+|----------------+--------------------------------------|
+| untracked      | file not tracked by git              |
+|----------------+--------------------------------------|
+| tracked        | committed and not staged             |
+|----------------+--------------------------------------|
+| staged         | staged to be included in next commit |
+|----------------+--------------------------------------|
+| dirty/modified | file has changes but not staged      |
+|----------------+--------------------------------------|
+
+* Adding to a Git repository
+
+ Do the following two step to make changes persist to your local
+    repository.
+
+  - git add: add the selected changes to the staging area
+  - git commit commit the staged changes into the Git repository
+
+|-----------------|       |--------------|     |---------------------|
+| working tree    |------>o  staging area|---->+  Git repository     |
+|                 |       |              |     |                     |
+|-------o----------       ----------------     |----------------------
+
+* Synchronizing with remote repositories
+
+*git push* is used to synchronize the local repository to remote
+  repository.
+
+*git pull and fetch* is used to get changes from other(remote)
+repository to local repository
+
+* Branches
+
+- Allows to work on different versions of your files
+
+- By switching to different branches one can work on
+  different features.
+
+*git branch* will show all the branch
+
+* Let do Some demo
+
+- [ ] Tell git who you are
+  - git config --global user.email
+  - git config --global user.name "Your Name"
+
+- [ ]  create repository at github.com
+- [ ]  git clone link to your repository
+     e.g git clone https://github.com/psnegi/test.git
+
+This will create a git folder in your current directory
+(named test here)
+* cont...
+
+- [ ] Lets run *git status* to see current status
+- [ ] Let create a new file called my_feat.r
+      with content x<- 1:4
+
+- [ ] Again run git status. It should show untracked file.
+- [ ] *stage(index)* your changes using *git add my_feat.r*
+- [ ] git status again. It should show changes to be committed.
+- [ ] When you are happy, you can commit these changes.
+
+* cont ...
+
+- [ ] use *git push origin master* to push changes to remote repo.
+      - origin refers to  repository you cloned from
+      - master refers to local branch(which is master right now)
+
+* Demo2
+
+ Why we care about branch concept?
+ Note that Master branch generally contains production code.
+
+ Hence to work on new feature/issue you create a branch.
+- [ ] git branch -b branch name
+- [ ] modify the code and add, commit
+- [ ] Now severity 1 bug found
+- [ ] switch to master
+- [ ] create a branch hotfix to resolve the bug
+      *git checkout -b hotfix*
+- [ ] do the changes and make sure fix works via testing
+* cont demo2 ..
+- [ ] Now merge your changes back to master to deploy fix into
+      production
+- [ ] *git checkout master*
+- [ ] *git merge hotfix*
+- [ ]  *git branch -d hotfix*. You don't need it master is
+       pointing at the same place
+- [ ] Let go back to working on the feature #53
+- [ ] git checkout git checkout iss53
+      - If you need hotfix then you can merge master to issu53
+      - Or you can wait until you decide  to merge iss53 back to master
+- [ ] Let say iss53 work is done.
+- [ ] git checkout master
+* cont demo2 ...
+
+- [ ] git merge iss53
+- [ ] resolve conflict in case of merge conflict and commit later.
+     - if not conflict git will create a new commit automatically
+- [ ] push the change via git push origin master
+- [ ] delete the branch and close the assign ticket
+
+[[https://git-scm.com/book/en/v1/Git-Branching-Basic-Branching-and-Merging][Basic Branching and Merging]]

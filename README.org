@@ -79,7 +79,7 @@ I will go over basic of python and jupyter notebook.
 |            |                                                                               | We'll be manipulating project data using some of these basic data structure     |
 |            |                                                                               | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]                |
 |------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-09-2018 | It help us in version control and  collaborate with others.                   |                                                                                 |
+| 01-09-2018 | It help us in version control and  collaborate with others.                   | [[./class_code/jan_9_2017_present.org][git overview and demo]]                                                           |
 |            | Got 15 minutes and want to learn Git, please use  this [[https://try.github.io/levels/1/challenges/1][link]] before the class. |                                                                                 |
 |            | Use this [[https://education.github.com/][link]] to get *free github account*.                                   |                                                                                 |
 |            | - [[http://www.vogella.com/tutorials/Git/article.html][git tutorial]]                                                                |                                                                                 |
