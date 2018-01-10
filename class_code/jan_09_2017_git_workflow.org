@@ -1,0 +1,38 @@
+* Git work flow
+** Branch
+When working on a project we generally have lot of different ideas.
+Basic idea of branch is to work on these ideas independently.
+When we are done with implementing it and our changes are fully
+reviewed by a collaborator and it passes all the system test, then
+we are good to merge our changes into master branch.
+
+*Note: Aything in master branch is always deployable* 
+*Note: Always create a descriptive  branch name*
+
+** Commits
+Whenever you make changes in your branch, you commit your changes
+with a clear message(-m option). This creates a transparent history
+of your work and helps other to follow your work and provide good feedback.
+Commits are considered as separate unit of work, so one can roll back changes.
+
+** Pull request(heart of collaboration)
+When you want to merge your changes to master branch, you can initiate a pull request.
+In a shared repository this initiates a code review and discussion before merge
+to master. In open source project you can follow fork and pull model.
+This allows project maintainer to review your changes before accepting them.
+
+** Discuss and review your changes
+Reviewing team or person or collaborator can have questions/ comments.
+you can make changes(write more unit test, fix bug) while discussion is going
+on and push up the changes.
+*Note: discussion supports Mardown format.*
+
+** Deploy
+Once pull changes are approved, you can deploy your changes in the production system.
+If it causes issue you can roll back to  master branch into production system.
+
+** Merge
+Once your changes are verified in production, you can merge your code into master branch.
+
+
+
