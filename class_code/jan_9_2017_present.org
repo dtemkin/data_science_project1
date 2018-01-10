@@ -21,7 +21,7 @@ In Distributed version control system
 
 * Distributed version control system cont..
                   
-#+BEGIN_SRC dot :file git_dist_arch.png :cmdline -Kdot -Tpng
+#+BEGIN_SRC dot :file git_dist_arch.png :cmdline -Kdot -Tpng :noweb yes
 digraph G {
   "remote repo" -> "local repo1";
   "remote repo" -> "local repo2";
@@ -63,11 +63,19 @@ After cloning one has complete repository with all the history.
   - git add: add the selected changes to the staging area
   - git commit commit the staged changes into the Git repository
 
-|-----------------|       |--------------|     |---------------------|
-| working tree    |------>o  staging area|---->+  Git repository     |
-|                 |       |              |     |                     |
-|-------o----------       ----------------     |----------------------
+#+BEGIN_SRC dot :file git_add_repo.png :cmdline -Kdot -Tpng :noweb yes
+digraph G {
+   rankdir="LR";
+  "working tree" -> "staging area";
+  "staging area" -> "Git repository";
+}
 
+#+END_SRC
+
+#+RESULTS:
+[[file:git_dist_arch.png]]
+
+[[file:./git_add_repo.png]]
 * Synchronizing with remote repositories
 
 *git push* is used to synchronize the local repository to remote
