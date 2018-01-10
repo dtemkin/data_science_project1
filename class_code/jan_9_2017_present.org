@@ -19,16 +19,19 @@ In Distributed version control system
   -Git is popular distributed version control system.
 
 * Distributed version control system cont..
+                
+               |--------|
+               | remote |
+     |---------| repo   |-------
+     |         |----|---|      |
+     |              |          | 
+     |              |          |
+ |---|-----|    |---|----| |--------|
+ | lcoal  |    | lcoal  |  | lcoal  |
+ | repo 1 |    | repo 2 |  | repo 3 |
+ |--------|    |--------|  |--------|
 
-                                 o---------+
-            +--------------------+ remote  +---------------+
-            |                    | repo    |               |
-            |                    +----+----+               |
-      o-----o---+                     |              o-----o-----+
-      | local   |               o-----o----+         | local     |
-      | repo 1  |               | local    |         | repo 3    |
-      +---------+               | repo 2   |         +-----------+
-                                +----------+
+
 * Git repositories
   - A repository can be cloned using git tool (*git clone ...*)
 
@@ -115,7 +118,7 @@ This will create a git folder in your current directory
  Note that Master branch generally contains production code.
 
  Hence to work on new feature/issue you create a branch.
-- [ ] git branch -b branch name
+- [ ] git checkout -b branch name
 - [ ] modify the code and add, commit
 - [ ] Now severity 1 bug found
 - [ ] switch to master
@@ -130,17 +133,18 @@ This will create a git folder in your current directory
 - [ ]  *git branch -d hotfix*. You don't need it master is
        pointing at the same place
 - [ ] Let go back to working on the feature #53
-- [ ] git checkout git checkout iss53
+- [ ] *git checkout iss53*
       - If you need hotfix then you can merge master to issu53
       - Or you can wait until you decide  to merge iss53 back to master
-- [ ] Let say iss53 work is done.
-- [ ] git checkout master
+- [ ] Let say iss53 work is done and you have *committed* your changes.
+- [ ] *git checkout master*
 * cont demo2 ...
 
-- [ ] git merge iss53
+- [ ] *git merge iss53*. This will merge iss53 into mater.
 - [ ] resolve conflict in case of merge conflict and commit later.
+     - We will go over resolving conflict.
      - if not conflict git will create a new commit automatically
-- [ ] push the change via git push origin master
-- [ ] delete the branch and close the assign ticket
+- [ ] push the change via *git push origin master* to remote repo.
+- [ ] delete the branch using *git branch -d iss53* and close the assign ticket.
 
 [[https://git-scm.com/book/en/v1/Git-Branching-Basic-Branching-and-Merging][Basic Branching and Merging]]
