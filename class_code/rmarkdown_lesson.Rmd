@@ -1,0 +1,125 @@
+---
+title: "How to use R Markdown"
+author: psnegi
+date: "01/11/2018"
+output:
+  html_document: default
+---
+
+# Basic
+In Rstudio click File - New File - R Markdown to create new R markdown file
+Fill the information in header. Its format is like key: value
+
+## Knitting 
+It complies the R makrdown file to desired output format. There is small button Knit at the top.
+When you click it, it will compile whole Rmakrdown file to selected format.
+
+**How we create R Markdown document**
+
+### R markdown syntax
+
+#### Text formating
+One can use \# for level 1 header \#\# for level 2 header etc. to organize the document.
+
+This is plain text. This is *italicized* text. This is **bold** text.
+This is  [link](www.du.edu)
+
+#### List
+- Unordered list 1
+- Unordered list 2
+  + subitem 1
+  + subitem 2
+   
+####Table
+Table field 1 | Table field 2
+--------------| --------------
+item 11       | item  12
+item 21     | item  13
+   
+   
+#### R code    
+*Now more exciting part. How we embed the r or othe language code ?*
+We'll use ``` {r } ```
+block to embed out code. This is called chunk.
+
+##### An example
+
+````{r}
+x <- 1:10
+x
+````
+It display both the code and output
+
+##### Suppressing the code using echo option
+
+```{r echo = FALSE}
+x <- 1:10
+x
+```
+##### Suppressing the output using eval option
+````{r eval = FALSE}
+x <- 1:10
+x
+````
+##### compile the code but include it using include option
+
+````{r eval = FALSE}
+x <- 1:10
+x
+````
+
+#### Using R inline
+
+
+```{r include = FALSE}
+
+# colorFunc <- "heat.colors"
+colorFunc <- "terrain.colors"
+# colorFunc <- "topo.colors"
+# colorFunc <- "cm.colors"
+# colorFunc <- "rainbow"
+```
+
+Base R comes with many functions for generating colors. The code below demonstrates the `r colorFunc` function. 
+
+
+## `r colorFunc`
+```{r fig.cap = "The Maunga Whau volcano.", echo = FALSE}
+image(volcano, col = get(colorFunc)(200))
+```
+
+## "Simple Language Demos"
+You can write code in languages other than R with R Markdown, e.g.
+
+## Bash
+
+```{bash}
+ls *.Rmd
+```
+
+
+
+## More "Table options"
+
+
+Several packages support making beautiful tables with R, such as
+
+* [xtable](https://cran.r-project.org/web/packages/xtable/)
+* [stargazer](https://cran.r-project.org/web/packages/stargazer/)
+* [pander](http://rapporter.github.io/pander/)
+* [tables](https://cran.r-project.org/web/packages/tables/)
+* [ascii](http://eusebe.github.io/ascii/)
+* etc.
+
+It is also very easy to make tables with knitr's `kable` function:
+
+```{r echo = FALSE, results = 'asis'}
+library(knitr)
+kable(mtcars[1:5, ], caption = "A knitr kable.")
+```
+
+## More "Markdown Demo"
+
+But did you know that you can also use R Markdown's markdown to make
+
+- Latex equations, $E = mc^{2}$
