@@ -1,0 +1,65 @@
+---
+title: "Data Science"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Data science cycle
+<img src="datascience_cycle.png"   height = "300">
+
+As we collect project data, we will come back to various part of this cycle.
+
+Let start with **Visualization**
+
+# Visualization using ggplot2
+
+Visualization is one of the most important activity in the  data science. 
+ 
+```{r include=FALSE}
+library(tidyverse)
+```
+**Do cars with big engines use more fuel than cars with small engines?**
+
+```{r}
+class(mpg)
+str(mpg)
+mpg
+```
+Let plot engine capacity *displ* and mpg *hwy* to get some idea
+```{r}
+library(ggplot2)
+ggplot(data = mpg)+
+  geom_point(mapping = aes(x =displ, y = hwy  ))
+
+```
+
+Clearly as engine size increase mpg decrease. Also there are some outlier in right hand side
+- **geom_point::** adds a layer of points to your plot.
+- **mapping::** defines how variables in your dataset are mapped to visual properties.
+- **aes::** Aesthetics include things like the size, the shape, or the color of your points.
+```{r}
+
+# 3.2.4 Exercises 4
+
+plot(mpg$hwy, mpg$cyl, main = "scatter plot", xlab = "mpg", ylab = "cylinder")
+```
+```{r}
+ggplot(data = mpg)+
+  geom_point(mapping = aes(x =displ, y = hwy, color = class  ))
+
+```
+Clearly right side points (in red) are 2 seaters. Explaining their high mileage with bigger cylinder. Note when this data set
+was created there was no hybird model.
+
+We can map class to size, alpha and shape asthetics too.
+Note: mapping unordered variable (class) to an ordered aesthetic (size) is not a good idea
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+```
+
+

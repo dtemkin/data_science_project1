@@ -25,10 +25,11 @@ This is plain text. This is *italicized* text. This is **bold** text.
 This is  [link](www.du.edu)
 
 #### List
+
 - Unordered list 1
 - Unordered list 2
-  + subitem 1
-  + subitem 2
+    + subitem 1
+    + subitem 2
    
 ####Table
 Table field 1 | Table field 2

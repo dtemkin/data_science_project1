@@ -1,0 +1,48 @@
+* Logging and Synchornization in  git 
+
+- *git status*
+- to see commited snapshots
+  + *git log or git log --online* 
+  + patch representing each commit.
+    *git log -p*
+
+* git remote to see all the repo connections
+ create, view, and delete connections to other repositories.
+- git remote
+- git remote -v
+- git remote add <name> <url>
+
+* git fetch
+
+import commits from remote to local repo.
+Fetch content is represented as remote branch and has
+no affect on  local development work.
+
+-Use *git branch -r* to see remote branches
+- git fetch <remote>
+- git fetch <remote> <branch>
+
+You merge from these branches if you like the changes
+done by others.  Do  usual git checkout and git merge commands. 
+
+* git fetch cont..
+Here is a typical flow of command one can do
+- *Git fetch origin*
+- To see what commits have been added
+  git log --oneline master..origin/master
+- *git checkout master*
+- *git diff origin/master* to check the difference
+- If you like the change
+   *git merge origin/master*
+
+Or Two run one command use
+- *git pull origin master*
+
+* Lot to cover
+- git rm
+- git mv
+- git rebase
+- git revert
+- how to push local branch
+- how put tag
+- ...
