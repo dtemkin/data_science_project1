@@ -45,10 +45,11 @@ block to embed out code. This is called chunk.
 
 ##### An example
 
-````{r}
+```{r}
 x <- 1:10
 x
-````
+```
+
 It display both the code and output
 
 ##### Suppressing the code using echo option
