@@ -87,7 +87,6 @@ I will go over basic of python and jupyter notebook.
 |------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
 | 01-11-2018 |                                                                               | [[./class_code/jan_11_present.org][git fetch pull etc]]                                                              |
 |            |                                                                               | [[./class_code/rmarkdown_lesson.Rmd][r markdown basic]]                                                                |
-|            |                                                                               | file:./class_code/rmarkdown_lesson.Rmd                                          |
 |            |                                                                               | [[./class_code/visualization.Rmd][datascience and visualization]]                                                   |
 |------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
 |            |                                                                               |                                                                                 |
