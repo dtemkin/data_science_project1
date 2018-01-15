@@ -72,7 +72,7 @@ I will go over basic of python and jupyter notebook.
 |---------------------+-----------------------------------------------|
 | HW                  | Due date                                      |
 |---------------------+-----------------------------------------------|
-| 1 [[./hw/hw1.org][problem statement]] | 19 Jan by 5 p.m (No late hw will be accepted) |
+| 1 [[./hw/h1.org][problem statement]] | 19 Jan by 5 p.m (No late hw will be accepted) |
 |---------------------+-----------------------------------------------|
 |                     |                                               |
 
