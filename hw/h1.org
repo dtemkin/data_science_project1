@@ -9,7 +9,7 @@ Jupyter notebook. For visualization matplotlib or bokeh can be used.
 
 
 Task in this  Kaggle competition was to predict Survival given some information
-(feature, variable..) about a person.
+(feature, variable..).
 
 We'll start  our exploratory data analysis starting with each feature.
 
@@ -17,7 +17,7 @@ We'll start  our exploratory data analysis starting with each feature.
 *Before sloving any of the following problem, write a short description of what are*
 *you going to do or what is your interpretation of results or visualization.*
 
-
+- Write the title of the R markdown document.
 - Load the Titanic training dataset as done  in first class (01-04-2018) and describe its
 field.
 
@@ -27,9 +27,10 @@ field.
 
 - Use *table* command in R to print distribution of Pclass.
 
-- Using ggplot2, plot the  histogram (use **geom_bar**)  of Pclass for Survival.
+- Using ggplot, plot the  histogram (use **geom_bar**)  of Pclass with asthetic property *fill = as.factor(Survival)*. As you can check
+  Pclass is an integer with few values, convert it to factor before using  ggplot.
 
-- Report any trend you find in this predictor(Pclass) for survival  cross class.
+- Report any trend you find in this predictor(Pclass) for survival  across class label.
  *Also note the using visual plot are more effective than using table command multiple times and finding pattern*
 
 -  For next feature Name print some name and report you finding by looking at the names.
