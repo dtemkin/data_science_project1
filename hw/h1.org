@@ -1,4 +1,4 @@
-* H1
+* H1 15 point
 In this homework, we'll practice some R markdown and data visualization.
 
 
@@ -17,20 +17,26 @@ We'll start  our exploratory data analysis starting with each feature.
 *Before solving any of the following problem, write a short description of what are*
 *you going to do or what is your interpretation of results or visualization.*
 
-- Write the title of the R markdown document.
-- Load the Titanic training dataset as done  in first class (01-04-2018) and describe its
+*Write the title of your R markdown document.*
+
+-(1 P) Load the Titanic training dataset as done  in first class (01-04-2018) and describe its
 field.
 
-- Write the code to check if Survival or Pclass is missing some values?
+-(1 P) Write the code to check if Survival or Pclass is missing some values?
 
-- Use *table* command in R to print distribution of Survival.
+-(1 P) Use *table* command in R to print distribution of Survival.
+  
+-(1 P) Use *table* command in R to print distribution of Pclass.
 
-- Use *table* command in R to print distribution of Pclass.
-
-- Using ggplot, plot the  histogram (use **geom_bar**)  of Pclass with asthetic property *fill = as.factor(Survival)*. As you can check
+-(2 P) Using ggplot, plot the  histogram (use **geom_bar**)  of Pclass with aesthetic property *fill = as.factor(Survival)*. As you can check
   Pclass is an integer with few values, convert it to factor before using  ggplot.
 
-- Report any trend you find in this predictor(Pclass) for survival  across class label.
+-(2 P) Report any trend you find in this predictor(Pclass) for survival  across class label.
  *Also note the using visual plot are more effective than using table command multiple times and finding pattern*
 
--  For next feature *Name*, print some name and report you finding by looking at the names.
+-(1 P)  For next feature *Name*, print some name and report you finding by looking at the names.
+
+-(4 P) Write a function to extract title from a name and add a new field into data called Title. Use *stringr* library.
+
+-(2 P) Using ggplot, plot the  histogram (use **geom_bar**)  of newly added field Title with aesthetic property *fill = as.factor(Survival)*.
+  AS Title also has few limited values convert to factor before using ggplot.
