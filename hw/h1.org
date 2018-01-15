@@ -36,7 +36,7 @@ field.
 
 -(1 P)  For next feature *Name*, print some name and report you finding by looking at the names.
 
--(4 P) Write a function to extract title from a name and add a new field into data called Title. Use *stringr* library.
+-(4 P) Write a function to extract *titles("Miss", "Master", "Mr", "Mrs", "Other" )* from the *name* field and add a new field into data called *Title*. Use *stringr* library.
 
--(2 P) Using ggplot, plot the  histogram (use **geom_bar**)  of newly added field Title with aesthetic property *fill = as.factor(Survival)*.
-  AS Title also has few limited values convert to factor before using ggplot.
+-(2 P) Using ggplot, plot the  histogram (use **geom_bar**)  of newly added field *Title* with aesthetic property *fill = as.factor(Survival)*.
+  As Title also has few limited values convert to factor before using ggplot.
