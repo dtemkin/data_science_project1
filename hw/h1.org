@@ -33,4 +33,4 @@ field.
 - Report any trend you find in this predictor(Pclass) for survival  across class label.
  *Also note the using visual plot are more effective than using table command multiple times and finding pattern*
 
--  For next feature Name print some name and report you finding by looking at the names.
+-  For next feature *Name*, print some name and report you finding by looking at the names.
