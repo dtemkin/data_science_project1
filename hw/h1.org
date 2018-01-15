@@ -5,7 +5,7 @@ In this homework, we'll practice some R markdown and data visualization.
 *Note*: If you are using Python please submit Jupyter notebook.
 You may use *Pandas* or  other library of your choice to do following analysis.
 I can help you in setting and basic introduction if you are not familiar with
-Jupyter notebook. For visualization matplotlib or bokeh can be used.
+Jupyter notebook. For visualization *matplotlib or bokeh* can be used.
 
 
 Task in this  Kaggle competition was to predict Survival given some information
@@ -14,7 +14,7 @@ Task in this  Kaggle competition was to predict Survival given some information
 We'll start  our exploratory data analysis starting with each feature.
 
 
-*Before sloving any of the following problem, write a short description of what are*
+*Before solving any of the following problem, write a short description of what are*
 *you going to do or what is your interpretation of results or visualization.*
 
 - Write the title of the R markdown document.
