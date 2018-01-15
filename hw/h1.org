@@ -1,0 +1,35 @@
+* H1
+In this homework, we'll practice some R markdown and data visualization.
+
+
+*Note*: If you are using Python please submit Jupyter notebook.
+You may use *Pandas* or  other library of your choice to do following analysis.
+I can help you in setting and basic introduction if you are not familiar with
+Jupyter notebook. For visualization matplotlib or bokeh can be used.
+
+
+Task in this  Kaggle competition was to predict Survival given some information
+(feature, variable..) about a person.
+
+We'll start  our exploratory data analysis starting with each feature.
+
+
+*Before sloving any of the following problem, write a short description of what are*
+*you going to do or what is your interpretation of results or visualization.*
+
+
+- Load the Titanic training dataset as done  in first class (01-04-2018) and describe its
+field.
+
+- Write the code to check if Survival or Pclass is missing some values?
+
+- Use *table* command in R to print distribution of Survival.
+
+- Use *table* command in R to print distribution of Pclass.
+
+- Using ggplot2, plot the  histogram (use **geom_bar**)  of Pclass for Survival.
+
+- Report any trend you find in this predictor(Pclass) for survival  cross class.
+ *Also note the using visual plot are more effective than using table command multiple times and finding pattern*
+
+-  For next feature Name print some name and report you finding by looking at the names.
