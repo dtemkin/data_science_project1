@@ -96,7 +96,9 @@ I will go over basic of python and jupyter notebook.
 | 01-11-2018 |                                                                               | [[./class_code/jan_11_present.org][git fetch pull etc]]                                                              |
 |            |                                                                               | [[./class_code/rmarkdown_lesson.Rmd][r markdown basic]]                                                                |
 |            |                                                                               | [[./class_code/visualization.Rmd][datascience and visualization]]                                                   |
-|            |                                                                               | [[https://files.fosswire.com/2007/08/fwunixref.pdf][Unix/Linux Command Reference]] to basic  commands |
+|            |                                                                               | [[https://files.fosswire.com/2007/08/fwunixref.pdf][Unix/Linux Command Reference]] to basic  commands                                 |
 |------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-|            |                                                                               |                                                                                 |
+| 01-16-2018 |                                                                               | remaining R [[./class_code/visualization_rem.Rmd][visualization]]  as per R for data science book                       |
+|            |                                                                               | It has some solved exercises too.                                               |
+|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
 |            |                                                                               |                                                                                 |

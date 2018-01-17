@@ -1,0 +1,316 @@
+---
+title: "Data Science"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Data science cycle
+<img src="datascience_cycle.png"   height = "300">
+
+As we collect project data, we will come back to various part of this cycle.
+
+Let start with **Visualization**
+
+# Visualization using ggplot2
+
+Visualization is one of the most important activity in the  data science. 
+ 
+```{r include=FALSE}
+library(tidyverse)
+```
+**Do cars with big engines use more fuel than cars with small engines?**
+
+```{r}
+class(mpg)
+str(mpg)
+mpg
+```
+Let plot engine capacity *displ* and mpg *hwy* to get some idea
+```{r}
+library(ggplot2)
+ggplot(data = mpg)+
+  geom_point(mapping = aes(x =displ, y = hwy  ))
+
+```
+
+Clearly as engine size increase mpg decrease. Also there are some outlier in right hand side
+- **geom_point::** adds a layer of points to your plot.
+- **mapping::** defines how variables in your dataset are mapped to visual properties.
+- **aes::** Aesthetics include things like the size, the shape, or the color of your points.
+
+ggplot(data = <DATA>) + 
+  <GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
+  
+```{r}
+
+# 3.2.4 Exercises 4
+
+plot(mpg$hwy, mpg$cyl, main = "scatter plot", xlab = "mpg", ylab = "cylinder")
+```
+```{r}
+ggplot(data = mpg)+
+  geom_point(mapping = aes(x =displ, y = hwy, color = class  ))
+
+```
+Clearly right side points (in red) are 2 seaters. Explaining their high mileage with bigger cylinder. Note when this data set was created there was no hybird model.
+
+We can map class to size, alpha and shape asthetics too.
+Note: mapping unordered variable (class) to an ordered aesthetic (size) is not a good idea
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+```
+# Exercise 3.3.1
+##1
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
+```
+
+## 2
+```{r}
+str(mpg)
+```
+## 3
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = hwy))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size =cty ))
+```
+## 4
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape =class, color = class ))
+```
+##5
+Modifies width of boarder
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(shape = 21, colour = "black", fill = "white", size = 5, stroke = 5)
+```
+
+# 6
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = displ <5 ))
+```
+# Facets
+Apart from using asethetics, One can use facets to split plot into subplots.
+The facet variable should be discrete.
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2)
+```
+*To facet on two variable*
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl)
+```
+
+or
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~drv + cyl)
+```
+another variation, if you prefer to not facet in the rows or columns dimension
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(. ~cyl)
+```
+
+# Excercise 3.5.1
+## 1
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~cty)
+```
+
+## 2
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(drv~cyl)
+```
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))
+```
+## 3
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+```
+##  4
+local attention vs global view
+## 5
+facet_grid calculated automatically the grid size
+## 6
+better visulaization?
+
+# Geometric Objects
+geom is a geometrical representation of the data used by plot
+```{r}
+ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+```
+Note note evry aes can be used with every ype of geom.
+```{r}
+ggplot(data = mpg) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv))
+```
+Look at [cheetsheets](https://www.rstudio.com/resources/cheatsheets/) for quick reference to ggplo2 or other libraries.
+
+```{r}
+ggplot(data = mpg) +
+  geom_smooth(
+    mapping = aes(x = displ, y = hwy, color = drv),
+    show.legend = FALSE
+  )
+
+```
+
+
+Multiple geom can be used in same plot
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+```
+or more comapctly. It avoid repetition. Useful when you want to change axis variable.
+```{r}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()
+```
+
+Se the effect or local vs global mapping
+
+```{r}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth()
+
+```
+
+Different data for different layer
+
+```{r}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth(data = filter(mpg, class == "subcompact"), se = FALSE)
+```
+
+
+# 3.6.1 Exercises
+
+# 3.7 Statistical transformations
+**diamond dataset** comes with ggplot2.
+
+bar chart
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut))
+```
+
+**Statistical transform(stat)** calculates new values(*count* etc..).
+Which stat a geom uses. Look at the value of stat in ?geom_bar or other geom.
+
+Infact stats and geom are generally interchangeable
+
+```{r}
+ggplot(data = diamonds) + 
+  stat_count(mapping = aes(x = cut))
+```
+
+explicit usage of stat
+
+```{r}
+demo <- tribble(
+  ~cut,         ~freq,
+  "Fair",       1610,
+  "Good",       4906,
+  "Very Good",  12082,
+  "Premium",    13791,
+  "Ideal",      21551
+)
+
+ggplot(data = demo) +
+  geom_bar(mapping = aes(x = cut, y = freq), stat = "identity")
+```
+
+override the default mapping from transformed variables to aesthetics
+e.g. using prop instead of counts.
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop.., group = 1))
+```
+
+
+To draw attenstion to statistical summary.
+
+```{r}
+ggplot(data = diamonds) + 
+  stat_summary(
+    mapping = aes(x = cut, y = depth),
+    fun.ymin = min,
+    fun.ymax = max,
+    fun.y = median
+  )
+```
+
+# 3.7.1 Exercises
+
+# 3.8 Position adjustments
+
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, colour = cut))
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = cut))
+```
+fill aesthetic to another variable
+
+
+```{r}
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = clarity))
+```
+
+stacking is performed according to **position=("identity", "dodge" or "fill") argument** 
+not very useful for graphs.
+
+Note there is a very useful position adjustment for scatterplot known as **jitter**
+to take care of **overplotting** problem.
+
+Comapre 
+
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), position = "jitter")
+```
+
+# 3.9 Coordinate systems
+# 3.10 The layered grammar of graphics
