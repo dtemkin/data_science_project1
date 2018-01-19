@@ -1,0 +1,459 @@
+# Data tansformation
+
+This notebook will cover basics of data transformation using **dply package**
+
+```{r}
+library(nycflights13)
+library(tidyverse)
+```
+Let's look at the data
+```{r}
+flights
+```
+
+## dplyr basics
+
+We learn about
+
+- how to pick an observation (**select**)
+- how to pick a variable(**filter**)
+- create new variable (**mutate**)
+- how to summarize many values(**summarize**)
+- reorder the row (**arrange**)
+
+Obove functions can be used in conjunction with ***group_by* to allow group by group evaluation
+of obove function.
+
+We will aslo see how to apply above  function one after another.
+
+## 5.2 filter rows with filter
+Allows subsetting the observation.
+
+To subset jan 1 st flights
+
+```{r}
+(jan1 <- filter(flights, month == 1, day == 1 ))
+```
+
+### Q 1 
+Filter jan 1 flights with carrier is not "UA"
+
+```{r}
+
+
+```
+
+### Q 2
+As you may have gaussed we can use any comparison operator when speficying condition in filter.
+But computer are finite precesion machine and we have to be careful when doing floating point arithmetic
+
+Run the foloowing command and explain  the result
+
+```{r}
+sqrt(2)^2 == 2
+```
+
+Hence use near.
+
+Run following code chunk and see the result.
+
+```{r}
+near(sqrt(2)^2, 2)
+```
+
+# 5.2.2 Logical operators(&, |, !)
+
+### Q Find all the flight in month 11 or 12
+
+```{r}
+filter(flights, )
+```
+
+### Q Explain the output of following code
+
+```{r}
+filter(flights, month == 11 | 12)
+```
+
+
+To avoid above pitfall use following syntax
+
+```{r}
+(nov_dec <- filter(flights, month %in% c(11, 12)))
+```
+
+
+```{r}
+(filter(flights, arr_delay <= 120))
+```
+
+```{r}
+str(flights)
+class(flights)
+```
+
+# 5.2.3 Missing values or NAs (“not availables”)
+**Almost any operaion invloving NA will be NA **.
+Use is.na() to check if something is NA. filter command excludes NA.
+
+
+### Q Find all the values of x greater than 1 or NA in following data frame
+
+```{r}
+df = tibble(x= c(1, NA , 3))
+
+
+```
+
+# 5.2.4 Excercise
+
+#### 1
+
+Find all flights that
+- Had an arrival delay of two or more hours
+- Were operated by United, American, or Delta
+- Departed between midnight and 6am (inclusive)
+
+```{r}
+(filter(flights,   ))
+```
+
+```{r}
+(filter(flights, ))
+```
+
+```{r}
+(filter(flights,  ))
+```
+
+
+3 How many flights have a missing dep_time? What other variables are missing? What might these rows represent?
+
+```{r}
+
+
+```
+
+
+## 5.3 Arrange rows with arrange()
+
+## arrange 
+it changes the order of row as per given columns.
+
+```{r}
+arrange(flights, year, month, day)
+```
+
+**desc()** to re-order by a column in descending order.
+
+```{r}
+arrange(flights, desc(arr_delay))
+```
+
+## 5.3.1 Exercises
+
+#### Q 1 How could you use arrange() to sort all missing values to the start?
+
+```{r}
+df <- tibble(x = c(5, 2, NA))
+arrange(df,  )
+```
+### Q 3 Sort flights to find the fastest flights.
+
+```{r}
+
+
+```
+
+## 5.4 Select columns with select()
+
+Useful for subsetting the variables in  dataset.
+
+```{r}
+select(flights, year, month, day)
+```
+
+
+Or select all the columns between year and day
+```{r}
+select(flights, year:day)
+```
+
+Any gusess what this will do?
+
+```{r}
+
+select(flights, -(year:day))
+```
+
+There are a number of helper functions you can use within select():
+- starts_with("abc"): matches names that begin with “abc”.
+- ends_with("xyz")
+- contains("ijk"): matches contain “ijk”.
+- matches() selects variables that match a regular expression.
+- num_range("x", 1:3) matches x1, x2 and x3.
+- everything(): all variables.
+
+e.g
+
+```{r}
+select(flights,  ends_with("delay"))
+```
+
+But what about everthing?
+Helpful if you want to move ...
+
+```{r}
+select(flights, )
+```
+
+
+to rename variables.
+```{r}
+rename(flights, tail_num = tailnum)
+```
+
+### Excercise 5.4.1
+#### Q 4
+Does the result of running the following code surprise you? How do the select helpers deal with case by default? How can you change that default?
+
+
+```{r}
+select(flights, contains("TIME"))
+```
+
+# 5.5 Add new variables with mutate()
+How to add new variable? Use mutate. **This helps in feature engineering**
+
+Lets work with smaller datset so that we can see the effect of mutate as it add new variable in the end.
+```{r}
+flights_sml <- select(flights, 
+  year:day, 
+  ends_with("delay"), 
+  distance, 
+  air_time
+)
+```
+
+
+```{r}
+mutate(flights_sml,
+  gain = arr_delay - dep_delay,
+  speed = distance / air_time * 60
+)
+
+```
+We can refer to columns that you’ve just created.
+
+```{r}
+mutate(flights_sml,
+  gain = arr_delay - dep_delay,
+  hours = air_time / 60,
+  gain_per_hour = gain / hours
+)
+```
+
+
+If you only want to keep the new variables, use **transmute()**
+
+```{r}
+transmute(flights,
+  gain = arr_delay - dep_delay,
+  hours = air_time / 60,
+  gain_per_hour = gain / hours
+)
+```
+
+### 5.5.1 Useful creation functions
+
+- There are many function for creating new  variable with mutate.
+Like usual  **arithmetic operator**  and **Modular arithmetic: %/% (integer division) and %% (remainder), log, lo2**  etc.
+
+```{r}
+transmute(flights,
+  dep_time,
+  hour = dep_time %/% 100,
+  minute = dep_time %% 100
+)
+```
+
+- Offsets: lead() and lag()
+```{r}
+(x<- 1:10)
+lead(x)
+lag(x)
+```
+**Q How can above opration be useful**
+
+- Also see  cumsum(), cumprod(), cummin(), cummax(), min_rank, row_rank, dense_rank, percent_rank, cume_rank
+
+## 5.6 Grouped summaries with summarise()
+
+It collapses a data frame to a single row.
+
+```{r}
+summarise(flights, delay = mean(dep_delay, na.rm = TRUE))
+
+```
+
+summarise() is useful when  we pair it with group_by().
+
+```{r}
+by_day <- group_by(flights, year, month, day)
+summarise(by_day, delay = mean(dep_delay, na.rm = TRUE))
+
+```
+
+## 5.6.1 Combining multiple operations with the pipe
+
+Let say we  want to explore the relationship between the distance and average delay for each location.
+
+
+```{r}
+by_dest <- group_by(flights, dest)
+
+delay<- summarise(by_dest, count = n(), dist= mean(distance, na.rm = TRUE),
+                  delay = mean(arr_delay, na.rm = TRUE))
+
+delay
+
+delay <- filter(delay, count > 20 , dest != "HNL")
+
+```
+
+Let plot the data to see the trend
+
+```{r}
+
+
+```
+
+As you can see we have to create a lot of intermediate name, we don't care about.
+A much more elegant way is to use **pipe %>%**
+
+```{r}
+
+
+ggplot(data = delay, mapping = aes(x = dist, y = delay)) +
+  geom_point(aes(size = count), alpha = 1/3) +
+  geom_smooth(se = FALSE)
+```
+
+is someting missing?  ggplot doesn't uses pipe but ggvis uses pipe
+
+## 5.6.2 Missing values
+
+```{r}
+flights %>% 
+  group_by(year, month, day) %>% 
+  summarise(mean = mean(dep_delay))
+```
+
+Lot of NA.
+
+use na.rm in agregation functions
+
+```{r}
+flights %>% 
+  group_by(year, month, day) %>% 
+  summarise(mean = mean(dep_delay, na.rm = TRUE))
+
+```
+
+or We can first removed cancelled flights
+
+```{r}
+not_cancelled <- flights %>% 
+  filter(!is.na(dep_delay), !is.na(arr_delay))
+
+not_cancelled %>% 
+  group_by(year, month, day) %>% 
+  summarise(mean = mean(dep_delay))
+```
+
+### 5.6.3 Counts
+
+whenever we are doing aggregation, it is always useful to include count, so that we know 
+that we are not drawing conclusion based on small amount of data.
+
+Let looks at the planes that have highest average delay.
+
+```{r}
+delays <- not_cancelled %>%
+  group_by(tailnum) %>%
+  summarize(delay = mean(arr_delay))
+
+
+ggplot(delays, mapping = aes(x = delay))+
+  geom_freqpoly(binwidth = 10)
+
+```
+
+
+Some planes have delay of 300 minutes.
+We can drill down more.
+
+```{r}
+delays <- not_cancelled %>%
+  group_by(tailnum) %>%
+  summarise(delay = mean(arr_delay, na.rm = TRUE), n = n())
+
+ggplot(data= delays, mapping = aes(x = n, y = delay))+
+  geom_point(alpha = 1/10)
+```
+
+Clealy there is much variation in flight delay when there are few flights.
+
+It is always usefull to remove these small sample size so that we can see general tend
+
+```{r}
+delays %>%
+  filter(n >21) %>%
+ggplot(mapping = aes(x =n, y = delay))+
+         geom_point(alpha = 1/10)
+
+```
+
+
+Another variation of this type of problem
+
+```{r}
+
+batting <- as_tibble(Lahman::Batting)
+bat_perf <- batting %>%
+  group_by(playerID)%>%
+  summarise(ba = sum(H, na.rm = TRUE)/sum(AB, na.rm = TRUE),
+            ab= sum(AB, na.rm = TRUE))
+
+bat_perf %>%
+  filter(ab > 100) %>%
+  ggplot(mapping = aes(x= ab, y = ba))+
+  geom_point(alpha= 1/10) +
+  geom_smooth(se= FALSE)
+
+```
+If you naively sort on desc(ba), the people with the best batting averages are clearly lucky, not skilled
+
+```{r}
+bat_perf %>%
+  arrange(desc(ba))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
