@@ -33,6 +33,7 @@ To subset jan 1 st flights
 
 ```{r}
 (jan1 <- filter(flights, month == 1, day == 1 ))
+
 ```
 
 ### Q 1 
@@ -40,7 +41,7 @@ Filter jan 1 flights with carrier is not "UA"
 
 ```{r}
 
-
+(filter(flights, month == 1, day == 1, carrier == "UA"))
 ```
 
 ### Q 2
@@ -66,7 +67,7 @@ near(sqrt(2)^2, 2)
 ### Q Find all the flight in month 11 or 12
 
 ```{r}
-filter(flights, )
+filter(flights, month == 11| month == 12)
 ```
 
 ### Q Explain the output of following code
@@ -102,7 +103,7 @@ Use is.na() to check if something is NA. filter command excludes NA.
 ```{r}
 df = tibble(x= c(1, NA , 3))
 
-
+filter(df, x>1|is.na(x))
 ```
 
 # 5.2.4 Excercise
@@ -115,11 +116,11 @@ Find all flights that
 - Departed between midnight and 6am (inclusive)
 
 ```{r}
-(filter(flights,   ))
+(filter(flights, arr_delay >=2   ))
 ```
 
 ```{r}
-(filter(flights, ))
+(filter(flights, carrier %in% c("UA", "AA", "DL") ))
 ```
 
 ```{r}
@@ -130,8 +131,8 @@ Find all flights that
 3 How many flights have a missing dep_time? What other variables are missing? What might these rows represent?
 
 ```{r}
-
-
+sum(is.na(flights$dep_time))
+names(flights)
 ```
 
 
@@ -156,13 +157,13 @@ arrange(flights, desc(arr_delay))
 
 ```{r}
 df <- tibble(x = c(5, 2, NA))
-arrange(df,  )
+arrange(df, desc(is.na(x)) )
 ```
 ### Q 3 Sort flights to find the fastest flights.
 
 ```{r}
 
-
+arrange(flights, air_time)
 ```
 
 ## 5.4 Select columns with select()
@@ -204,12 +205,13 @@ But what about everthing?
 Helpful if you want to move ...
 
 ```{r}
-select(flights, )
+select(flights, carrier, everything() )
 ```
 
 
 to rename variables.
 ```{r}
+flights
 rename(flights, tail_num = tailnum)
 ```
 
@@ -272,8 +274,8 @@ Like usual  **arithmetic operator**  and **Modular arithmetic: %/% (integer divi
 ```{r}
 transmute(flights,
   dep_time,
-  hour = dep_time %/% 100,
-  minute = dep_time %% 100
+  hour = dep_time %/% 60,
+  minute = dep_time %% 60
 )
 ```
 
@@ -324,7 +326,9 @@ delay <- filter(delay, count > 20 , dest != "HNL")
 Let plot the data to see the trend
 
 ```{r}
-
+ggplot(delay, mapping = aes(x = dist, y = delay)) +
+   geom_point()+
+  geom_smooth(se= FALSE)
 
 ```
 

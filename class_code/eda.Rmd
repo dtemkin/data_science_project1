@@ -1,0 +1,206 @@
+---
+title: "eda(Exploratory Data Analysis)"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+EDA is an iterative cycle
+
+- Ask questions about data
+- use visulaization, tranformation and modelling to look for answers
+- use insight for new question or refine the questions
+
+Question will helps us in deciding which part of data to focus, grpah to use  etc.
+
+# What question to ask
+It will depend on client request and domain.
+
+Two types of questions will always be useful for making discoveries within your data.
+- What type of variation occurs within my variables?
+- What type of covariation occurs between my variables?
+
+## Visualizing distributions
+
+```{r}
+library(ggplot2)
+
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut))
+```
+for continous variable what geom functin to use?
+
+```{r}
+ggplot(data = diamonds) +
+   (mapping = aes(x = carat), binwidth = 0.5)
+```
+
+Always play with different binwidth
+
+Here we look on on dimanods with size less than 3 carat
+
+```{r}
+library(dplyr)
+ diamonds %>% 
+  filter(carat < 3) %>%
+ggplot(mapping = aes(x = carat)) +
+  geom_histogram(binwidth = 0.1)
+
+```
+
+In case you want to overlay multiple histogram
+
+
+```{r}
+diamonds %>% 
+  filter(carat < 3) %>%
+ggplot( mapping = aes(x = carat, colour = cut)) +
+  geom_freqpoly(binwidth = 0.1)
+```
+
+# Typical and Atypical values
+What type of questions we should ask about our plots/data
+
+- common/rare value, why?
+- any other pattern
+
+What are the question you can ask about following histogram
+
+```{r}
+diamonds %>% 
+  filter(carat < 3) %>%
+ggplot( mapping = aes(x = carat)) +
+  geom_histogram(binwidth = 0.01)
+
+```
+- 
+-
+-
+
+
+Clear there is some clustor  based on carat value
+
+What question one can ask about clusters
+
+-
+-
+-
+
+
+What kind of information you can infer from following histogram
+
+```{r}
+ggplot(data = faithful, mapping = aes(x = eruptions)) + 
+  geom_histogram(binwidth = 0.25)
+```
+
+
+# Atypical values or outlier
+
+- they doesn't seem to fit the pattern
+- are they error in the process or points to new information
+
+If you have lot of data it can be hard to see outliers
+
+
+are there some outlier in the following data?
+
+
+```{r}
+ggplot(diamonds) + 
+  geom_histogram(mapping = aes(x = y), binwidth = 0.5)
+```
+
+
+
+```{r}
+ggplot(diamonds) + 
+  geom_histogram(mapping = aes(x = y), binwidth = 0.5) +
+  coord_cartesian(ylim = c(0, 50))
+```
+
+
+Let see what kind of obervation they represent
+
+```{r}
+unusual <- diamonds %>% 
+  filter(y < 3 | y > 20) %>% 
+  select(price, x, y, z) %>%
+  arrange(y)
+unusual
+```
+
+
+One should do analyssis with and wihtout outlier and if they has minimal effect or
+we can't figure out why they are there we can replace them, otherwise we shouldn't
+
+drop them wihtout justification. Mention it in your writeup.
+
+#  Missing values
+How to handle unsual values
+- drop the entire row
+```{r}
+
+diamonds2 <- diamonds %>% 
+  filter(between(y, 3, 20))
+```
+
+What kind of problem we may have in this situation
+
+```{r}
+
+diamonds2 <- diamonds %>% 
+  mutate(y = ifelse(y < 3 | y > 20, NA, y))
+
+```
+
+ggplot gives warning
+
+```{r}
+ggplot(data = diamonds2, mapping = aes(x = x, y = y)) + 
+  geom_point()
+
+```
+
+
+
+Some times we want to compare observations with missing values and recorded values.
+compare the scheduled departure times for cancelled and non-cancelled times
+
+
+```{r}
+nycflights13::flights %>% 
+  mutate(
+    cancelled = is.na(dep_time),
+    sched_hour = sched_dep_time %/% 100,
+    sched_min = sched_dep_time %% 100,
+    sched_dep_time = sched_hour + sched_min / 60
+  ) %>% 
+  ggplot(mapping = aes(sched_dep_time)) + 
+    geom_freqpoly(mapping = aes(colour = cancelled), binwidth = 1/4)
+
+
+```
+
+
+
+# covariation
+
+
+```{r}
+ggplot(data = diamonds, mapping = aes(x = cut, y = price)) +
+  geom_boxplot()
+```
+
+
+
+
+
+
+
+
+
+
+
