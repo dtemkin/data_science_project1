@@ -5,8 +5,10 @@ Complete the following task.
 
 - Create the git repo with project name.
 
-- Add a README.md file with headers describing  *Project objective* and *Milestones per week*.
-   Milestones will get revised as per progress and client update. .Rmd and .md has same markdown format.
+- Add a README.md file with headers describing  *Project objective* and *Milestones per week* upto 8th March.
+  .Rmd and .md has same markdown format. 
+  
+  We will revised milestones as per progress, client update and course requirements. 
   *Please send me README.md* if you don't want me to be a contributor in the project otherwise send me an invite
   for being collaborator. If you send me(my git id is *psnegi*) an invite please don't email README.md, I can read it from the repository.
 
@@ -14,21 +16,21 @@ Complete the following task.
    -  Write a function for data importing in a separate file called import_tidy.r. 
      Use *readxl* from tidyverse family. It will helps in loading a particular sheet *(sheet = 4 or name of sheet))* and
      using excel cell range convention *range = cell_cols("B:D")*  for specify data range. 
-     Look at  *http://readxl.tidyverse.org/* for more information. *For csv file read_csv is good option.*
+     Look at  *http://readxl.tidyverse.org/* for more information. *For csv file read_csv is a good option.*
 
-     - Write an function to get data in tidy format. Write some initial and as we move ahead will improve it.
+     - Write an function to get data in tidy format. Write some initial code and as we move ahead will improve it.
 
 - If you are downloading data from the web(rss feed or images).
-  - functions for importing the data and setting up the pipeline for storing and loading it.
-  - functions for cleaning and transforming data. 
+  - Write functions for importing the data and setting up the pipeline for storing and loading it.
+  - Write functions for cleaning and transforming data. 
      - For text data it can related to normalization operations on the text data.
-     - For image data it can be taking care of outlier pixels and normalizing(using $l_2 norm, \infinity norm$ etc.) the data.
+     - For image data it can be taking care of outlier pixels and normalizing(using $l_2 norm, \infinity(max) norm$ etc.) the data.
 
 *If you already ahead in the project, let me know which portion (file name and line numbers) of your code I should look into.*
-*If I am not added to your project, then you need to show code in your computer.*
+*If I am not added to your project, then you need to show the code in your computer.*
 
 *Note: Please use some sort of directory structure to manage your code. As I have already mentioned there is no rule for the project structure.*
-*I'll recommend keeping data in data directory inside project directory(don't check in  your data to git). Data loading and tidying code in analysis directory*
+*I'll recommend keeping data in data directory inside project directory(don't check in  your data to git). Data loading and tidying code in analysis directory.*
 *As you make progress, .Rmd  or .ipynb files* can be stored in root directory of the project or another folder.
 
 
