@@ -1,0 +1,254 @@
+---
+title: "jan_25_import_tidy"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## tibble and tribble(transposed tibble)
+
+```{r}
+library(tidyverse)
+tibble(
+  x = 1:5, 
+  y = 1, 
+  z = x ^ 2 + y
+)
+```
+
+
+```{r}
+tribble(
+  ~x, ~y, ~z,
+  #--|--|----
+  "a", 2, 3.6,
+  "b", 1, 8.5
+)
+```
+Differences in the usage of a tibble vs. a classic data.frame: printing and subsetting
+
+Controlling row and width
+```{r}
+nycflights13::flights %>% 
+  print(n = 10, width = Inf)
+```
+
+
+```{r}
+nycflights13::flights %>% 
+  View()
+```
+
+Cick on filter in View and check what else you can do.
+
+## Excercise 10.5
+### If you have the name of a variable stored in an object, e.g. var <- "mpg", how can you extract the reference variable from a tibble?
+```{r}
+
+var <- "day"
+nycflights13::flights[var] # returns tibble
+nycflights13::flights  # how to get vector
+```
+
+# Data import
+**readr package**
+
+available functions are read_csv, read_csv2, read_delim, read_fwf
+
+A useful way to create example in simulations and testing
+
+```{r}
+read_csv("a,b,c
+1,2,3
+4,5,6")
+```
+
+
+Check for how to control col_name some of the args.
+
+Note: avoid read.csv() # slow and not really reproducible code
+
+# problem reading csv file
+
+```{r}
+challenge <- read_csv(readr_example("challenge.csv"))
+```
+
+
+```{r}
+challenge <- read_csv(
+  readr_example("challenge.csv"), 
+  col_types = cols(
+    x = col_double(),
+    y = col_character()
+  )
+)
+
+```
+
+let look at the tail
+
+```{r}
+tail(challenge)
+
+```
+
+Looks like date string. Let fix it
+
+```{r}
+challenge <- read_csv(
+  readr_example("challenge.csv"), 
+  col_types = cols(
+    x = col_double(),
+    y = col_date()
+  )
+)
+challenge
+```
+
+
+
+use **readxl** to read .xls or .xlsx
+
+# 12 Tidy
+
+**tidyr package**
+
+tidy data:: row for observation and column for variable, each value has its own cell
+
+It is easy to work with tidy data and packages in tidyverse are designed that way
+
+```{r}
+table1
+```
+
+
+
+```{r}
+# Visualise changes over time
+library(ggplot2)
+ggplot(table1, aes(year, cases)) + 
+  geom_line()
+```
+
+We may have to talk to domain expert what the observation, what the variables are.
+
+Also resolve one of two common problems:
+- One variable might be spread across multiple columns.
+- One observation might be scattered across multiple rows.
+
+
+## Gathering
+dataset where some of the column names are not names of variables, but values of a variable.
+
+```{r}
+table4a
+
+```
+What are the columns that represent values, not variables?
+
+To tidy this dataset we need
+1- columns that represent values, not variables, 
+2- name of the variable whose values form the column names(key)
+3- name of the variable whose values are spread over the cells(value)
+
+read the documentation of gather and use it to tiday the table4a
+```{r}
+tidy4a <-
+```
+
+
+Let look at this table
+```{r}
+table4b
+```
+
+
+Do the same excercise for table4b
+
+```{r}
+tidy4b <-table4b %>% 
+  gather(`1999`, `2000`, key = "year", value = "population")
+
+
+```
+
+How to combine above two table
+
+```{r}
+left_join(tidy4a, tidy4b)
+```
+
+## Spreading
+What if an observation is scattered across multiple columns
+
+```{r}
+table2
+```
+
+any guess on the function to use
+
+```{r}
+
+```
+
+
+```{r}
+table4a
+```
+
+## 12.3.3 Exercises
+### 2  Why does this code fail?
+```{r}
+table4a %>% 
+  gather(1999, 2000, key = "year", value = "cases")
+
+```
+
+### 3 Why does spreading this tibble fail? How could you add a new column to fix the problem?
+
+```{r}
+people <- tribble(
+  ~name,             ~key,    ~value, 
+  #-----------------|--------|------
+  "Phillip Woods",   "age",       45, 
+  "Phillip Woods",   "height",   186, 
+  "Phillip Woods",   "age",       50, 
+  "Jessica Cordero", "age",       37, 
+  "Jessica Cordero", "height",   156
+)
+
+```
+
+```{r}
+people1<-spread(people, key = key, value = value)
+people1
+```
+
+
+## Seperate
+
+```{r}
+table3
+```
+
+
+```{r}
+table3 %>% 
+  separate(rate, into = c("cases", "population"))
+```
+
+## Unite
+
+```{r}
+table5
+```
+
+```{r}
+unite(table5, new, century, year)
+```
+
+
