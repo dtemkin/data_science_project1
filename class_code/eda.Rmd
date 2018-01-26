@@ -34,7 +34,7 @@ for continous variable what geom functin to use?
 
 ```{r}
 ggplot(data = diamonds) +
-   (mapping = aes(x = carat), binwidth = 0.5)
+   geom_histogram(mapping = aes(x = carat), binwidth = 0.5)
 ```
 
 Always play with different binwidth
