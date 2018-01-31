@@ -114,4 +114,5 @@ I will go over basic of python and jupyter notebook.
 | 01-25-2018 |                                                                               | [[./class_code/jan_25_tidy.Rmd][import and tidy]]                                                                 |
 |            |                                                                               |                                                                                 |
 |------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+| 01-30-2018 |                                                                               | [[./class_code/latex_and_rmarkdown.Rmd][latex overview]]                                                                  |
 |            |                                                                               |                                                                                 |

@@ -1,0 +1,149 @@
+---
+title: "latex and rmarkdown"
+header-includes:
+   - \usepackage{amsmath}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What is Latex?
+
+Document preparation system for high-quality typesetting, primarily used for scientific
+documents.
+Its has
+
+* Typesetting journal articles, technical reports, books, and slide presentations.
+* Typesetting of complex mathematical formulas.
+
+Check [the latex project](https://www.latex-project.org/) for more information.
+
+One can enter and leave latex mode using
+
+* \$ \$ for inline mathematics
+* \$\$ \$\$ for displayed equations
+
+
+#Basics
+## Subscript and Superscript
+
+$X_i, Y_i$ and for multiple indices $X_{i,j}$
+
+
+## Superscript
+
+$X^i, Y^i$
+
+
+### Q How to write X subscript i,j and power n
+
+
+## Greek letters and special symbols
+
+$ \alpha, \beta, \gamma$
+
+$$x \pm y $$
+$$ x \lt y$$
+$$a_i \ge 0 ~~ \forall i \in {1, 2, \cdots, N} $$
+or 
+$$a_i \ge 0 ~~ \forall i \in \mathbb{N} $$
+
+## Some mathematicsl function and operators
+
+$$\sqrt{x^2 +3} $$
+$$\frac{x+4}{y^n + 9} $$
+
+$$\sum_{i=1}^{n} x_i $$
+
+## Self-Sizing Parentheses
+Create parentheses and braces which size themselves  to contain large expressions using
+\left and \right
+
+First let see the problem if we don;t use \left and \right
+
+$$\sum_{i=1}^{i=n}(\frac{X_i}{Y_i}+ Z_i + 4) $$
+
+### Q fix parenthese using \left and \right
+
+
+
+# Some calculus operators
+
+## integration
+## Q write integration of x square plus sin(x) with limits 0 to 4 pi using \int
+$$ $$
+For double integration use \int twice with appropriate limits
+
+## Differentitation
+
+### Differentiation of y power with respsect to y
+
+$$\frac{dy} {dx}$$
+### Q look at this expression and fix parenthesis issue.
+$$ \frac{\partial u}{\partial t} = (\frac{\partial^2 u}{\partial x^2} + \frac{\partial ^2 u}{\partial y^2} ) $$
+### Limits
+
+$$\lim_{x \to +\infty} \frac{5x^2 +7x^3}{x^2 +5x^4} = 5 $$
+
+# Linear Algebra
+
+## Matrices
+
+Use \begin{array} \end{array} environment for matrics.
+Cells are separated by the & symbol, and each line (except the last) terminated by \\.
+{rrr} to indicate that each column is right justified.
+
+$$\begin{array}
+{rrr}
+1.1 & 2.2 & 3 \\
+4 & 5 & 9,8 \\
+7 & 8 & 9
+\end{array}
+$$
+
+### Q Can u fix square barcket scaling issue in following statement
+$$\mathbf{X} = [\begin{array}
+{rrr}
+1.1 & 2.2 & 3 \\
+4 & 5 & 9,8 \\
+7 & 8 & 9
+\end{array}]
+$$
+## More on latex
+### Align equations
+$$
+\begin{align*} 
+2x - 5y + 4x + 3y &=  6x -5y + 3y \\ 
+&=  6x -2y
+\end{align*}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
