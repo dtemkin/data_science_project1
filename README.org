@@ -75,7 +75,7 @@ I will go over basic of python and jupyter notebook.
 |-----+-----------------|
 | [[./hw/h1.org][hw1]] | 19 Jan by 5 p.m |
 |-----+-----------------|
-| [[./hw/h2.org][hw2]] | 31 Jan by 5 p.m |
+| [[./hw/h2.org][hw2]] | 1 Feb by 5 p.m  |
 |-----+-----------------|
 |     |                 |
 
