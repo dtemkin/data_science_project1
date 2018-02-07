@@ -34,19 +34,19 @@ $X_i, Y_i$ and for multiple indices $X_{i,j}$
 
 ## Superscript
 
-$X^i, Y^i$
+$X^i, Y^{2i}$
 
 
 ### Q How to write X subscript i,j and power n
-
+$X_{i,j}^n$
 
 ## Greek letters and special symbols
 
 $ \alpha, \beta, \gamma$
 
 $$x \pm y $$
-$$ x \lt y$$
-$$a_i \ge 0 ~~ \forall i \in {1, 2, \cdots, N} $$
+$$ x \ge y$$
+$$a_i \ge 0 ~~ \forall i \in \{1, 2, \cdots, N\} $$
 or 
 $$a_i \ge 0 ~~ \forall i \in \mathbb{N} $$
 
@@ -63,7 +63,7 @@ Create parentheses and braces which size themselves  to contain large expression
 
 First let see the problem if we don;t use \left and \right
 
-$$\sum_{i=1}^{i=n}(\frac{X_i}{Y_i}+ Z_i + 4) $$
+$$\sum_{i=1}^{i=n} \left(\frac{X_i}{Y_i}+ Z_i + 4 \right) $$
 
 ### Q fix parenthese using \left and \right
 
@@ -73,7 +73,7 @@ $$\sum_{i=1}^{i=n}(\frac{X_i}{Y_i}+ Z_i + 4) $$
 
 ## integration
 ## Q write integration of x square plus sin(x) with limits 0 to 4 pi using \int
-$$ $$
+$$ \int_0^{4 \pi} x^2 + \sin x~ dx $$
 For double integration use \int twice with appropriate limits
 
 ## Differentitation
@@ -98,27 +98,29 @@ Cells are separated by the & symbol, and each line (except the last) terminated 
 $$\begin{array}
 {rrr}
 1.1 & 2.2 & 3 \\
-4 & 5 & 9,8 \\
+4 & 5 & 9.8 \\
 7 & 8 & 9
 \end{array}
 $$
 
 ### Q Can u fix square barcket scaling issue in following statement
-$$\mathbf{X} = [\begin{array}
+$$\mathbf{X} = \left[\begin{array}
 {rrr}
 1.1 & 2.2 & 3 \\
-4 & 5 & 9,8 \\
+4 & 5 & 9.8 \\
 7 & 8 & 9
-\end{array}]
+\end{array}\right]
 $$
 ## More on latex
 ### Align equations
 $$
-\begin{align*} 
-2x - 5y + 4x + 3y &=  6x -5y + 3y \\ 
+\begin{align} 
+
+2x - &5y + 4x + 3y =  6x -5y + 3y \\ 
 &=  6x -2y
-\end{align*}
+\end{align}
 $$
+
 
 
 
