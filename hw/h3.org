@@ -10,7 +10,7 @@ Please Finish the following activity as per you projects milestones. It'll helps
 
    Also complete database integration if it is part of your milestones.
 
-Please you organize you code and  tag you github repository the way you did for HW2 using *git tag command(Don't forget to push the tag)*
+Please  organize you code and  tag you github repository the way you did for HW2 using *git tag command(Don't forget to push the tag)*
 
 
   
