@@ -1,6 +1,6 @@
-Please Finalize the following activity as per you projects milestones. It'll helps us to move ahead for exploratory data analysis(visualization, modelling, statistical measures etc)
+Please Finish the following activity as per you projects milestones. It'll helps us to move ahead for exploratory data analysis(*visualization, modelling, statistical measures etc.*)
 
-- Complete the data(excel, text, image) loading(5 points)
+- Complete the data(excel, text, image) loading(4 points)
 - Complete cleanup. (6) 
   - If you have excel sheets please cleanup its columns and take care of any anomalies in values(like date and time conversion, characters to correct numeric values,
      two columns has same values make sure discrepancies in values are taken care).
@@ -10,6 +10,7 @@ Please Finalize the following activity as per you projects milestones. It'll hel
 
    Also complete database integration if it is part of your milestones.
 
-Please let me know of any help you need to move ahead. Apart from office hours and class time, I am available via email too.
+Please you organize you code and  tag you github repository the way you did for HW2 using *git tag command(Don't forget to push the tag)*
+
 
   
