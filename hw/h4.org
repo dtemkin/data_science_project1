@@ -1,4 +1,4 @@
-We have cleaned up data and have done basic visualization. Let move ahead with statistical analysis(remaining visualization, hypothesis testing etc.),
+We have cleaned up data and have done basic visualization. Let's move ahead with statistical analysis(remaining visualization, hypothesis testing etc.),
 model building for prediction or for finding pattern. Please document your finding in the notebook. 
 
 Points(10)
@@ -14,6 +14,6 @@ Please  organize you code and  tag you github repository the way you did for HW3
 Please start preparing for your final presentation. If you are working in group, each member has to present a portion of the project.
 
 *On 6 th March there will be a 15-20 minutes in class pre-presentation based on current progress.*
-*Note: on 13th march there will be in class presentation and  project report is due on 13th march.*
+*Note: on 13th march there will be final in class presentation and  project report is due on 13th march.*
 
   
