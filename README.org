@@ -70,59 +70,65 @@ I will go over basic of python and jupyter notebook.
    - [[https://docs.python.org/3/tutorial/index.html][The Python Tutorial]]  
 * Homeworks
 *No late hw will be accepted*
-|-----+------------------|
-| HW  | daue date        |
-|-----+------------------|
-| [[./hw/h1.org][hw1]] | 19 Jan by 5 p.m  |
-|-----+------------------|
-| [[./hw/h2.org][hw2]] | 1 Feb by 11 p.m  |
-|-----+------------------|
-| [[./hw/h3.org][hw3]] | 15 th Feb 10 p.m |
-|-----+------------------|
-|     |                  |
+|-----+-------------------|
+| HW  | due date          |
+|-----+-------------------|
+| [[./hw/h1.org][hw1]] | 19 Jan by 5 p.m   |
+|-----+-------------------|
+| [[./hw/h2.org][hw2]] | 1 Feb by 11 p.m   |
+|-----+-------------------|
+| [[./hw/h3.org][hw3]] | 15 th Feb 10 p.m  |
+|-----+-------------------|
+| [[./hw/h4.org][hw4]] | 6 th March 11 p.m |
+|-----+-------------------|
+|     |                   |
+
 
 
 * Course Activity
 
-|       Date | Reading/Coding Assignments                                                    | class activity                                                                  |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                                   | - [[./class_code/basic_r_data_structure.r][This]] is R code about basic data structure we went in the class                |
-|            |                                                                               | Please practice  in RStudio and try to solve unsolved part.                     |
-|            |                                                                               | [[./data/train.csv][Here]] is the link to titanic dataset used in above code.                         |
-|            |                                                                               | You need to keep it in the same folder as the  r code or set path appropriately |
-|            |                                                                               | We'll be manipulating project data using some of these basic data structure     |
-|            |                                                                               | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]                |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-09-2018 | It help us in version control and  collaborate with others.                   | [[./class_code/jan_9_2017_present.org][git overview and demo]]                                                           |
-|            | Got 15 minutes and want to learn Git, please use  this [[https://try.github.io/levels/1/challenges/1][link]] before the class. |                                                                                 |
-|            | Use this [[https://education.github.com/][link]] to get *free github account*.                                   | [[./class_code/jan_09_2017_git_workflow.org][git workflow]]                                                                    |
-|            | - [[http://www.vogella.com/tutorials/Git/article.html][git tutorial]]                                                                |                                                                                 |
-|            | -[[https://guides.github.com/][ overview guides]]                                                             |                                                                                 |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-11-2018 |                                                                               | [[./class_code/jan_11_present.org][git fetch pull etc]]                                                              |
-|            |                                                                               | [[./class_code/rmarkdown_lesson.Rmd][r markdown basic]]                                                                |
-|            |                                                                               | [[./class_code/visualization.Rmd][datascience and visualization]]                                                   |
-|            |                                                                               | [[https://files.fosswire.com/2007/08/fwunixref.pdf][Unix/Linux Command Reference]] to basic  commands                                 |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-16-2018 |                                                                               | remaining R [[./class_code/visualization_rem.Rmd][visualization]]  as per R for data science book                       |
-|            |                                                                               | It has some solved exercises too.                                               |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-18-2018 |                                                                               | [[./class_code/data_transform.Rmd][data transformation]]                                                             |
-|            |                                                                               |                                                                                 |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-23-2018 |                                                                               | [[./class_code/eda.Rmd][EDA]]                                                                             |
-|            |                                                                               | [[https://github.com/psnegi/sample_project][sample project organization]]                                                     |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-25-2018 |                                                                               | [[./class_code/jan_25_tidy.Rmd][import and tidy]]                                                                 |
-|            |                                                                               |                                                                                 |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 01-30-2018 |                                                                               | [[./class_code/latex_and_rmarkdown.Rmd][latex overview]]                                                                  |
-|            |                                                                               |                                                                                 |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 02-01-2018 |                                                                               | Went though projects update and help                                            |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 02-06-2018 |                                                                               | [[./class_code/debugging.r][debugging in R]]                                                                  |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-| 02-08-2018 |                                                                               | Went though projects update and help                                            |
-|------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
-|            |                                                                               |                                                                                 |
+|                         Date | Reading/Coding Assignments                                                    | class activity                                                                  |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-04-2018 | Go over [[http://rmarkdown.rstudio.com/][R Markdown]] tutorial                                                   | - [[./class_code/basic_r_data_structure.r][This]] is R code about basic data structure we went in the class                |
+|                              |                                                                               | Please practice  in RStudio and try to solve unsolved part.                     |
+|                              |                                                                               | [[./data/train.csv][Here]] is the link to titanic dataset used in above code.                         |
+|                              |                                                                               | You need to keep it in the same folder as the  r code or set path appropriately |
+|                              |                                                                               | We'll be manipulating project data using some of these basic data structure     |
+|                              |                                                                               | - For data privacy reason, we'll not check-in data in the [[https://github.com/][github]]                |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-09-2018 | It help us in version control and  collaborate with others.                   | [[./class_code/jan_9_2017_present.org][git overview and demo]]                                                           |
+|                              | Got 15 minutes and want to learn Git, please use  this [[https://try.github.io/levels/1/challenges/1][link]] before the class. |                                                                                 |
+|                              | Use this [[https://education.github.com/][link]] to get *free github account*.                                   | [[./class_code/jan_09_2017_git_workflow.org][git workflow]]                                                                    |
+|                              | - [[http://www.vogella.com/tutorials/Git/article.html][git tutorial]]                                                                |                                                                                 |
+|                              | -[[https://guides.github.com/][ overview guides]]                                                             |                                                                                 |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-11-2018 |                                                                               | [[./class_code/jan_11_present.org][git fetch pull etc]]                                                              |
+|                              |                                                                               | [[./class_code/rmarkdown_lesson.Rmd][r markdown basic]]                                                                |
+|                              |                                                                               | [[./class_code/visualization.Rmd][datascience and visualization]]                                                   |
+|                              |                                                                               | [[https://files.fosswire.com/2007/08/fwunixref.pdf][Unix/Linux Command Reference]] to basic  commands                                 |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-16-2018 |                                                                               | remaining R [[./class_code/visualization_rem.Rmd][visualization]]  as per R for data science book                       |
+|                              |                                                                               | It has some solved exercises too.                                               |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-18-2018 |                                                                               | [[./class_code/data_transform.Rmd][data transformation]]                                                             |
+|                              |                                                                               |                                                                                 |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-23-2018 |                                                                               | [[./class_code/eda.Rmd][EDA]]                                                                             |
+|                              |                                                                               | [[https://github.com/psnegi/sample_project][sample project organization]]                                                     |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-25-2018 |                                                                               | [[./class_code/jan_25_tidy.Rmd][import and tidy]]                                                                 |
+|                              |                                                                               |                                                                                 |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   01-30-2018 |                                                                               | [[./class_code/latex_and_rmarkdown.Rmd][latex overview]]                                                                  |
+|                              |                                                                               |                                                                                 |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   02-01-2018 |                                                                               | Went though projects update and help                                            |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   02-06-2018 |                                                                               | [[./class_code/debugging.r][debugging in R]]                                                                  |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                   02-08-2018 |                                                                               | Went though projects update and help                                            |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+| 02-[13, 15, 20, 22, 28]-2018 |                                                                               | In class project help                                                           |
+|                              |                                                                               |                                                                                 |
+|------------------------------+-------------------------------------------------------------------------------+---------------------------------------------------------------------------------|
+|                              |                                                                               |                                                                                 |
