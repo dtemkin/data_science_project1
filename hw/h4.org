@@ -2,7 +2,7 @@ We have cleaned up data and have done basic visualization. Let's move ahead with
 model building for prediction or for finding pattern. Please document your finding in the notebook. 
 
 Points(10)
-- For Growhosue project, finish KPI and build linear regression model for predicting revenue, boxes.
+- For Growhouse project, finish KPI and build linear regression model for predicting revenue, boxes.
 - For Jury project finish  chi square test, 3 hypothesis testing and building logistic regression model.
 - For  rss feed project,  finish lda model building, topics visualization/interpretation, use topic probability distribution as feature for logistic regression and evaluate it.
 - If you have image data, finish bounding box model building and evaluate it.
